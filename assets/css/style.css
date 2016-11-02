@@ -1,0 +1,40 @@
+nav .nav-wrapper {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+}
+
+nav .nav-wrapper .icon i {
+  height: 32px;
+  line-height: 32px;
+}
+
+nav .nav-wrapper .caption {
+  height: 16px;
+  line-height: 16px;
+}
+
+nav .nav-wrapper a.dropdown-button, a.dropdown-button i {
+  height: 48px;
+  line-height: 48px;
+}
+
+nav .nav-wrapper .dropdown a {
+  text-align: left;
+}
+
+nav .nav-wrapper .dropdown-button i {
+  display: inline;
+}
+
+li.tab {
+  padding: 8px 8px;
+}
+
+.tab {
+  width: 12%;
+}
+
+.dropdown {
+  width: 28%;
+}
