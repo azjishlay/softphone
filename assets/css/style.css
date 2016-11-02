@@ -31,10 +31,29 @@ li.tab {
   padding: 8px 8px;
 }
 
+li.tab.disabled a, li.tab.disabled a:hover {
+  background-color: transparent;
+  color: gray;
+  cursor: default;
+}
+
+li.tab a.active {
+  background-color: gray;
+}
+
 .tab {
   width: 12%;
 }
 
 .dropdown {
   width: 28%;
+}
+
+.content div.tab-container {
+  display: none;
+}
+
+#callDisplay {
+  display: none;
+  color: green;
 }

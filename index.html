@@ -34,25 +34,25 @@
         <!-- Full Menu -->
         <ul class="hide-on-med-and-down">
           <li class="tab">
-            <a href="#test1">
+            <a href="#" id="test1">
               <div class="icon"><i class="material-icons">exit_to_app</i></div>
               <div class="caption">Logout</div>
             </a>
           </li>
           <li class="tab">
-            <a href="#test1">
+            <a href="#" id="test2">
               <div class="icon"><i class="material-icons">exit_to_app</i></div>
               <div class="caption">Logout</div>
             </a>
           </li>
           <li class="tab">
-            <a href="#test1">
+            <a href="#" id="test3">
               <div class="icon"><i class="material-icons">exit_to_app</i></div>
               <div class="caption">Logout</div>
             </a>
           </li>
           <li class="tab">
-            <a href="#test1">
+            <a href="#" id="test4">
               <div class="icon"><i class="material-icons">exit_to_app</i></div>
               <div class="caption">Logout</div>
             </a>
@@ -67,13 +67,13 @@
             </ul>
           </li>
           <li class="tab disabled">
-            <a href="#test1">
+            <a href="#" class="">
               <div class="icon"><i class="material-icons"> </i></div>
               <div class="caption"> </div>
             </a>
           </li>
-          <li class="tab">
-            <a href="#test1">
+          <li class="tab disabled">
+            <a href="#" class="">
               <div class="icon"><i class="material-icons">exit_to_app</i></div>
               <div class="caption">Logout</div>
             </a>
@@ -92,8 +92,43 @@
     </nav>
 
     <!-- Content -->
+    <div class="content container">
 
+      <div class="tab-container" id="test1-tab">
+        <h1>Test 1</h1>
+      </div>
 
+      <div class="tab-container" id="test2-tab">
+        <h1>Test 2</h1>
+
+        <!-- Call Form -->
+        <div class="callForm notInCall">
+          <form>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="phoneNumber" type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title='Phone Number (Format: +99(99)9999-9999)'>
+                <label for="phoneNumber">Enter Number: </label>
+              </div>
+              <div class="input-field col s6">
+                <a class="waves-effect waves-light btn" id="callBtn">call</a>
+              </div>
+            </div>
+          </form>
+
+          <!-- Call Display -->
+          <div id="callDisplay">
+            Connected
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-container" id="test3-tab">
+        <h1>Test 3</h1>
+      </div>
+      <div class="tab-container" id="test4-tab">
+        <h1>Test 4</h1>
+      </div>
+    </div>
   </div><!-- /.main -->
 
   <!-- JQuery -->
