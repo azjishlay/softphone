@@ -4,14 +4,36 @@ nav .nav-wrapper {
   text-align: center;
 }
 
-nav .nav-wrapper .icon i {
-  height: 32px;
-  line-height: 32px;
+nav .nav-wrapper .icon, .fallback {
+  position: relative;
+  height: 24px;
+}
+
+nav .nav-wrapper .icon .svg, .overlay {
+  position: absolute;
+  top:0;left:0;bottom:0;right:0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  padding: 0 0 2px 0;
+}
+
+.overlay {
+  color: black;
+}
+
+svg {
+  fill: white;
+}
+
+svg:hover {
+  fill: green;
 }
 
 nav .nav-wrapper .caption {
   height: 16px;
   line-height: 16px;
+  padding: 4px 0 0 0;
 }
 
 nav .nav-wrapper a.dropdown-button, a.dropdown-button i {
@@ -55,5 +77,8 @@ li.tab a.active {
 
 #callDisplay {
   display: none;
+}
+
+.connected {
   color: green;
 }

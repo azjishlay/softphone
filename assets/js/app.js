@@ -21,8 +21,8 @@ $(document).ready(function() {
   $('#callBtn').click(function() {
     $(this).addClass('disabled');
     $('#callDisplay').show();
+    $("#callStatus").addClass("connected");
+    $("#callStatus").text("Connected");
   });
-
-
 
 });

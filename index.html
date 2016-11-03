@@ -35,25 +35,42 @@
         <ul class="hide-on-med-and-down">
           <li class="tab">
             <a href="#" id="test1">
-              <div class="icon"><i class="material-icons">exit_to_app</i></div>
-              <div class="caption">Logout</div>
+              <div class="icon">
+                <object class="svg" type="image/svg+xml" data="assets/svg/headset-with-microphone.svg">
+                  <img class="svg fallback" src="assets/svg/headset-with-microphone.png" alt="" />
+                </object>
+              </div>
+              <div class="caption">Unavailable</div>
             </a>
           </li>
           <li class="tab">
             <a href="#" id="test2" class="active">
-              <div class="icon"><i class="material-icons">exit_to_app</i></div>
-              <div class="caption">Logout</div>
+              <div class="icon">
+                <object class="svg" id="btn2" type="image/svg+xml" data="assets/svg/phone-call-button.svg">
+                  <img class="svg fallback" src="assets/svg/phone-call-button.png" alt="">
+                </object>
+              </div>
+              <div class="caption">Make a Call</div>
             </a>
           </li>
           <li class="tab">
             <a href="#" id="test3">
-              <div class="icon"><i class="material-icons">exit_to_app</i></div>
-              <div class="caption">Logout</div>
+              <div class="icon">
+                <div class="overlay">3</div>
+                <object class="svg" type="image/svg+xml" data="assets/svg/filled-circle.svg">
+                  <img class="svg fallback" src="assets/svg/filled-circle.png" alt="">
+                </object>
+              </div>
+              <div class="caption">Call Queue</div>
             </a>
           </li>
           <li class="tab">
             <a href="#" id="test4">
-              <div class="icon"><i class="material-icons">exit_to_app</i></div>
+              <div class="icon">
+                <object class="svg" type="image/svg+xml" data="assets/svg/exit-to-app-button.svg">
+                  <img class="svg fallback" src="assets/svg/exit-to-app-button.png" alt="">
+                </object>
+              </div>
               <div class="caption">Logout</div>
             </a>
           </li>
@@ -68,14 +85,17 @@
           </li>
           <li class="tab disabled">
             <a href="#" class="">
-              <div class="icon"><i class="material-icons"> </i></div>
-              <div class="caption"> </div>
+              <div class="icon"></div>
+              <div class="caption"></div>
             </a>
           </li>
-          <li class="tab disabled">
+          <li class="tab">
             <a href="#" class="">
-              <div class="icon"><i class="material-icons">exit_to_app</i></div>
-              <div class="caption">Logout</div>
+              <div class="icon">
+                <object class="svg" type="image/svg+xml" data="assets/svg/settings-cogwheel-button.svg">
+                  <img class="svg fallback" src="assets/svg/settings-cogwheel-button.png" alt="">
+                </object></div>
+              <div class="caption">Settings</div>
             </a>
           </li>
         </ul>
@@ -118,7 +138,11 @@
 
           <!-- Call Display -->
           <div id="callDisplay">
-            Connected
+            <div class="contactDetails">
+              <p class="contactName">John Weldon</p>
+              <p class="contactNumberType">Mobile</p>
+            </div>
+            <div id="callStatus"></div>
           </div>
         </div>
       </div>
