@@ -6,6 +6,13 @@
 
   <title>Softphone Coding Project</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+  <!-- Material Design Icon Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
   <!-- Materialize CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
@@ -15,12 +22,206 @@
 </head>
 <body>
 
-  <div>
-    Some content here
-  </div>
+  <div class="main">
+
+    <!-- Header -->
+
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-wrapper">
+
+        <!-- Hamburger -->
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        <!-- Full Menu -->
+        <ul class="hide-on-med-and-down">
+          <li class="tab">
+            <a href="#" id="test1">
+              <div class="icon">
+                <object class="svg" type="image/svg+xml" data="assets/svg/headset-with-microphone.svg">
+                  <img class="svg fallback" src="assets/svg/headset-with-microphone.png" alt="" />
+                </object>
+              </div>
+              <div class="caption">Unavailable</div>
+            </a>
+          </li>
+          <li class="tab">
+            <!-- <a href="#" id="test2"> -->
+            <a href="#" id="test2" class="active">
+              <div class="icon">
+                <object class="svg" id="btn2" type="image/svg+xml" data="assets/svg/phone-call-button.svg">
+                  <img class="svg fallback" src="assets/svg/phone-call-button.png" alt="">
+                </object>
+              </div>
+              <div class="caption">Make a Call</div>
+            </a>
+          </li>
+          <li class="tab">
+            <a href="#" id="test3">
+              <div class="icon">
+                <div class="overlay">3</div>
+                <object class="svg" type="image/svg+xml" data="assets/svg/filled-circle.svg">
+                  <img class="svg fallback" src="assets/svg/filled-circle.png" alt="">
+                </object>
+              </div>
+              <div class="caption">Call Queue</div>
+            </a>
+          </li>
+          <li class="tab">
+            <a href="#" id="test4">
+              <div class="icon">
+                <object class="svg" type="image/svg+xml" data="assets/svg/exit-to-app-button.svg">
+                  <img class="svg fallback" src="assets/svg/exit-to-app-button.png" alt="">
+                </object>
+              </div>
+              <div class="caption">Logout</div>
+            </a>
+          </li>
+          <li class="tab dropdown">
+            <!-- Dropdown Trigger -->
+            <a class="dropdown-button" href="#" data-activates="dropdown1">Select a Line <i class="material-icons right">arrow_drop_down</i></a>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a href="#">Line 1</a></li>
+              <li><a href="#">Line 2</a></li>
+            </ul>
+          </li>
+          <li class="tab disabled">
+            <a href="#" class="">
+              <div class="icon"></div>
+              <div class="caption"></div>
+            </a>
+          </li>
+          <li class="tab">
+            <a href="#" class="">
+              <div class="icon">
+                <object class="svg" type="image/svg+xml" data="assets/svg/settings-cogwheel-button.svg">
+                  <img class="svg fallback" src="assets/svg/settings-cogwheel-button.png" alt="">
+                </object></div>
+              <div class="caption">Settings</div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Collapsed Menu -->
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="sass.html">Sass</a></li>
+          <li><a href="badges.html">Components</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
+          <li><a href="mobile.html">Mobile</a></li>
+        </ul>
+
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+
+      <div class="tab-container" id="test1-tab">
+        <h1>Test 1</h1>
+      </div>
+
+      <div class="tab-container" id="test2-tab">
+        <!-- <h1>Test 2</h1> -->
+
+        <div class="row valign-wrapper step2">
+          <!-- Call Form -->
+          <form class="callForm">
+            <div class="input-field col inputLabel">
+              Enter Number:
+            </div>
+            <div class="input-field col inputBox">
+              <input id="phoneNumber" type='tel' class='validate' pattern='(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}' title='Phone Number: (999) 999-9999' placeholder="(480) 388-1245">
+            </div>
+            <div class="input-field col inputSelect">
+              <select class="browser-default">
+                <option value="" disabled selected>Business Areas</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <div class="input-field col btnHolder">
+              <a class="btn" id="callBtn">
+                <i class="material-icons">phone</i>
+              </a>
+              <a class="btn" id="msgBtn">
+                <i class="material-icons">chat</i>
+              </a>
+            </div>
+          </form>
+        </div><!-- /.step2 -->
+
+        <div class="row valign-wrapper step3">
+          <!-- Call Display -->
+          <div id="callDisplay">
+
+            <!-- Contact Details -->
+            <div class="contactDetailsHolder">
+              <div class="contactPic">
+                <img src="assets/img/johnweldon.jpg" alt="John Weldon"/>
+              </div>
+              <div class="contactText">
+                <div class="contactName">John Weldon</div>
+                <div class="contactNumberType">Mobile</div>
+              </div>
+            </div><!-- /.contactStatusHolder -->
+
+            <!-- Call Status -->
+            <div class="callStatusHolder">
+              <div class="row">
+                <!-- Status -->
+                <div class="col">
+                  <div id="callStatus">Connected</div>
+                  <div id="callTime">00:20</div>
+                  <!-- <div id="callStatus"></div>
+                  <div id="callTime"></div> -->
+                </div>
+              </div>
+              <div class="row">
+                <!-- Buttons -->
+                <div class="col btnHolder optionBtns">
+                  <a class="btn" id="pauseCallBtn">
+                    <i class="material-icons">phone_paused</i>
+                  </a>
+                  <a class="btn" id="fwdCallBtn">
+                    <i class="material-icons">phone_forwarded</i>
+                  </a>
+                  <a class="btn" id="conCallBtn">
+                    <i class="material-icons">call_merge</i>
+                  </a>
+                </div>
+                <div class="col btnHolder actionBtns">
+                  <a class="btn" id="recCallBtn">
+                    <i class="material-icons">fiber_manual_record</i>
+                  </a>
+                  <a class="btn" id="endCallBtn">
+                    <i class="material-icons">call_end</i>
+                  </a>
+                </div>
+              </div>
+
+            </div><!-- /.callStatusHolder -->
+          </div>
+        </div><!-- /.step3 -->
+      </div>
+
+      <div class="tab-container" id="test3-tab">
+        <h1>Test 3</h1>
+      </div>
+      <div class="tab-container" id="test4-tab">
+        <h1>Test 4</h1>
+      </div>
+    </div>
+  </div><!-- /.main -->
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <!-- Materialize JS -->
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
   <!-- Custom JS -->
   <script src="assets/js/app.js"></script>

@@ -1,0 +1,312 @@
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 100%;
+}
+
+/*
+Color Palette
+*/
+
+.gray1 {
+  color: #959595;
+}
+
+.gray2 {
+  color: #535353;
+}
+
+.blue1 {
+  color: #0062A5;
+}
+
+.blue2 {
+  color: #303A4E;
+}
+
+/*
+Nav Bar
+*/
+
+nav {
+  background-color: #959595;
+  color: #ffffff;
+}
+
+nav .nav-wrapper {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+}
+
+nav .nav-wrapper .icon, .fallback {
+  position: relative;
+  height: 24px;
+}
+
+nav .nav-wrapper .icon .svg, .overlay {
+  position: absolute;
+  top:0;left:0;bottom:0;right:0;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  padding: 0 0 2px 0;
+}
+
+.overlay {
+  color: black;
+}
+
+svg {
+  fill: white;
+}
+
+svg:hover {
+  fill: green;
+}
+
+nav .nav-wrapper .caption {
+  height: 16px;
+  line-height: 16px;
+  padding: 4px 0 0 0;
+}
+
+nav .nav-wrapper a.dropdown-button, a.dropdown-button i {
+  height: 48px;
+  line-height: 48px;
+}
+
+nav .nav-wrapper .dropdown a {
+  text-align: left;
+}
+
+nav .nav-wrapper .dropdown-button i {
+  display: inline;
+}
+
+li.tab {
+  padding: 8px 8px;
+}
+
+li.tab.disabled a, li.tab.disabled a:hover {
+  background-color: transparent;
+  color: #535353;
+  cursor: default;
+}
+
+li.tab a.active {
+  background-color: #535353;
+}
+
+.tab {
+  width: 12%;
+}
+
+.dropdown {
+  width: 28%;
+}
+
+/*
+Step 2
+*/
+
+.content div.tab-container {
+  display: none;
+  background-color: #535353;
+  color: #ffffff;
+}
+
+.content div.tab-container > .row {
+  height: 80px;
+  margin: 0;
+}
+
+.content div.tab-container > .row.step3 {
+  height: 160px;
+}
+
+.callForm {
+  width: 100%;
+}
+
+.callForm .inputLabel, .callForm .inputBox, .callForm .btnHolder {
+  width: 24%;
+}
+
+.callForm .inputSelect {
+  width: 28%;
+}
+
+.callForm div.input-field > * {
+  height: 50px;
+  text-align: center;
+}
+
+.callForm .inputLabel {
+  font-size: 2.4em;
+  line-height: 50px;
+  text-align: right;
+}
+
+.callForm .inputBox input#phoneNumber, .callForm .inputSelect select {
+  background-color: #ffffff;
+  border: 1px solid #959595;
+  color: #000000;
+}
+
+.callForm input#phoneNumber:focus {
+  border-bottom: 1px solid #0062A5;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
+  box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
+}
+
+.callForm .inputBox input#phoneNumber {
+  font-size: 2.6em;
+}
+
+.callForm .inputSelect select {
+  font-size: 1.4em;
+}
+
+/*
+Step 3
+*/
+
+#callDisplay {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  text-align: right;
+}
+
+.contactDetailsHolder {
+  width: 48%;
+  padding: 4px 0;
+}
+
+.callStatusHolder {
+  width: 52%;
+  padding: 4px 0;
+  text-align: left;
+}
+
+.contactPic, .contactText, #callStatus, #callTime {
+  display: inline-block;
+  text-align: left;
+}
+
+.contactPic {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.contactPic img {
+  position: absolute;
+  top:0;left:0;bottom:0;right:0;
+  margin: auto;
+  object-fit: cover;
+  height: 40px;
+}
+
+.contactText {
+  width: 50%;
+}
+
+.contactText .contactName, #callStatus, #callTime {
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 2em;
+  top: 0;
+}
+
+.contactText .contactNumberType {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+.callStatusHolder > .row {
+}
+
+.callStatusHolder > .row .col:first-of-type {
+  width: 54%;
+}
+
+.callStatusHolder #callStatus {
+  text-transform: uppercase;
+}
+
+.callStatusHolder #callTime {
+  /*font-size: 3em;*/
+  float: right;
+}
+
+.connected {
+  color: green;
+}
+
+/*
+Buttons
+*/
+
+.btnHolder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 50px;
+  text-align: center;
+}
+
+.btnHolder a {
+  background-color: #303A4E;
+  color: #ffffff;
+  width: 105px;
+  height: 100%;
+}
+
+.btnHolder i {
+  font-size: 3em;
+  line-height: 50px;
+  margin: auto;
+}
+
+.optionBtns {
+  width: 54%;
+}
+
+.actionBtns {
+  width: 46%;
+}
+
+.optionBtns a, .actionBtns a {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#recCallBtn i {
+  color: red;
+}
+
+#endCallBtn {
+  background-color: red;
+  color: #ffffff;
+}
+
+#endCallBtn:hover {
+  background-color: darkred;
+}
+
+/* Hide on initial window load */
+.row.step3 {
+  /*display: none;*/
+}
