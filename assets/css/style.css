@@ -113,7 +113,7 @@ li.tab a.active {
 }
 
 /*
-Step 1
+Step 2
 */
 
 .content div.tab-container {
@@ -125,6 +125,10 @@ Step 1
 .content div.tab-container > .row {
   height: 80px;
   margin: 0;
+}
+
+.content div.tab-container > .row.step3 {
+  height: 160px;
 }
 
 .callForm {
@@ -191,19 +195,38 @@ Step 1
 }
 
 /*
-Step 2
+Step 3
 */
 
+
+
+
 #callDisplay {
-  /*display: none;*/
+  border: 1px solid black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .contactDetailsHolder {
+  border: 1px solid black;
+  width: 48%;
   padding: 4px 0;
+
 }
 
-.contactDetailsHolder, .contactPic, .contactText,
-.callStatusHolder, #callStatus, #callTime {
+.contactDetailsHolder {
+
+}
+
+.callStatusHolder {
+  border: 1px solid black;
+  width: 52%;
+}
+
+.contactPic, .contactText,
+#callStatus, #callTime {
   display: inline-block;
 }
 
@@ -223,6 +246,11 @@ Step 2
   height: 40px;
 }
 
+.contactText {
+  width: 50%;
+
+}
+
 .contactText .contactName, #callStatus, #callTime {
   font-weight: bold;
   font-size: 1.8em;
@@ -234,6 +262,10 @@ Step 2
   line-height: 1.4em;
 }
 
+
+.callStatusHolder > .row {
+  border: 1px solid black;
+}
 #callStatus {
   text-transform: uppercase;
 }
@@ -244,4 +276,10 @@ Step 2
 
 .connected {
   color: green;
+}
+
+
+/* Hide on initial window load */
+.row.step3 {
+  /*display: none;*/
 }

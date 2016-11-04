@@ -21,10 +21,10 @@ $(document).ready(function() {
   // Activate inCall state
   $('#callBtn').click(function() {
     $('.input-field *:not(#msgBtn)').addClass('disabled');
-    $('#callDisplay').show();
+    $(".row.step3").show();
     $(".callStatusHolder").addClass("connected");
-    $("#callStatus").text("Connected");
-    $("#callTime").text("00:20");
+    // $("#callStatus").text("Connected");
+    // $("#callTime").text("00:20");
   });
 
 });

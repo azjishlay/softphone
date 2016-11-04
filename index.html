@@ -47,6 +47,7 @@
             </a>
           </li>
           <li class="tab">
+            <!-- <a href="#" id="test2"> -->
             <a href="#" id="test2" class="active">
               <div class="icon">
                 <object class="svg" id="btn2" type="image/svg+xml" data="assets/svg/phone-call-button.svg">
@@ -124,7 +125,7 @@
       <div class="tab-container" id="test2-tab">
         <!-- <h1>Test 2</h1> -->
 
-        <div class="row valign-wrapper">
+        <div class="row valign-wrapper step2">
           <!-- Call Form -->
           <form class="callForm">
             <div class="input-field col inputLabel">
@@ -150,9 +151,9 @@
               </a>
             </div>
           </form>
-        </div>
+        </div><!-- /.step2 -->
 
-        <div class="row">
+        <div class="row valign-wrapper step3">
           <!-- Call Display -->
           <div id="callDisplay">
 
@@ -165,18 +166,25 @@
                 <div class="contactName">John Weldon</div>
                 <div class="contactNumberType">Mobile</div>
               </div>
-            </div>
+            </div><!-- /.contactStatusHolder -->
 
             <!-- Call Status -->
             <div class="callStatusHolder">
-              <div id="callStatus"></div>
-              <div id="callTime"></div>
-            </div>
+              <div class="row">
+                <!-- Status -->
+                <div id="callStatus">Connected</div>
+                <!-- <div id="callStatus"></div> -->
+                <div id="callTime">00:20</div>
+                <!-- <div id="callTime"></div> -->
+              </div>
+              <div class="row">
+                <!-- Buttons -->
+                Some content here
+              </div>
+
+            </div><!-- /.callStatusHolder -->
           </div>
-
-        </div>
-
-        <div class="row"></div>
+        </div><!-- /.step3 -->
       </div>
 
       <div class="tab-container" id="test3-tab">
