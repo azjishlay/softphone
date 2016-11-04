@@ -175,59 +175,32 @@ Step 2
   font-size: 1.4em;
 }
 
-.callForm .btnHolder {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.callForm .btnHolder a {
-  background-color: #303A4E;
-  color: #ffffff;
-  width: 40%;
-  margin: 0 10px;
-}
-
-.callForm .btnHolder i {
-  font-size: 3em;
-  line-height: 50px;
-  margin: auto;
-}
-
 /*
 Step 3
 */
 
-
-
-
 #callDisplay {
-  border: 1px solid black;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   width: 100%;
+  text-align: right;
 }
 
 .contactDetailsHolder {
-  border: 1px solid black;
   width: 48%;
   padding: 4px 0;
-
-}
-
-.contactDetailsHolder {
-
 }
 
 .callStatusHolder {
-  border: 1px solid black;
   width: 52%;
+  padding: 4px 0;
+  text-align: left;
 }
 
-.contactPic, .contactText,
-#callStatus, #callTime {
+.contactPic, .contactText, #callStatus, #callTime {
   display: inline-block;
+  text-align: left;
 }
 
 .contactPic {
@@ -248,13 +221,13 @@ Step 3
 
 .contactText {
   width: 50%;
-
 }
 
 .contactText .contactName, #callStatus, #callTime {
   font-weight: bold;
   font-size: 1.8em;
   line-height: 2em;
+  top: 0;
 }
 
 .contactText .contactNumberType {
@@ -262,22 +235,76 @@ Step 3
   line-height: 1.4em;
 }
 
-
 .callStatusHolder > .row {
-  border: 1px solid black;
 }
-#callStatus {
+
+.callStatusHolder > .row .col:first-of-type {
+  width: 54%;
+}
+
+.callStatusHolder #callStatus {
   text-transform: uppercase;
 }
 
-#callTime {
-  font-size: 3em;
+.callStatusHolder #callTime {
+  /*font-size: 3em;*/
+  float: right;
 }
 
 .connected {
   color: green;
 }
 
+/*
+Buttons
+*/
+
+.btnHolder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  height: 50px;
+  text-align: center;
+}
+
+.btnHolder a {
+  background-color: #303A4E;
+  color: #ffffff;
+  width: 105px;
+  height: 100%;
+}
+
+.btnHolder i {
+  font-size: 3em;
+  line-height: 50px;
+  margin: auto;
+}
+
+.optionBtns {
+  width: 54%;
+}
+
+.actionBtns {
+  width: 46%;
+}
+
+.optionBtns a, .actionBtns a {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#recCallBtn i {
+  color: red;
+}
+
+#endCallBtn {
+  background-color: red;
+  color: #ffffff;
+}
+
+#endCallBtn:hover {
+  background-color: darkred;
+}
 
 /* Hide on initial window load */
 .row.step3 {

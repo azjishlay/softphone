@@ -172,14 +172,34 @@
             <div class="callStatusHolder">
               <div class="row">
                 <!-- Status -->
-                <div id="callStatus">Connected</div>
-                <!-- <div id="callStatus"></div> -->
-                <div id="callTime">00:20</div>
-                <!-- <div id="callTime"></div> -->
+                <div class="col">
+                  <div id="callStatus">Connected</div>
+                  <div id="callTime">00:20</div>
+                  <!-- <div id="callStatus"></div>
+                  <div id="callTime"></div> -->
+                </div>
               </div>
               <div class="row">
                 <!-- Buttons -->
-                Some content here
+                <div class="col btnHolder optionBtns">
+                  <a class="btn" id="pauseCallBtn">
+                    <i class="material-icons">phone_paused</i>
+                  </a>
+                  <a class="btn" id="fwdCallBtn">
+                    <i class="material-icons">phone_forwarded</i>
+                  </a>
+                  <a class="btn" id="conCallBtn">
+                    <i class="material-icons">call_merge</i>
+                  </a>
+                </div>
+                <div class="col btnHolder actionBtns">
+                  <a class="btn" id="recCallBtn">
+                    <i class="material-icons">fiber_manual_record</i>
+                  </a>
+                  <a class="btn" id="endCallBtn">
+                    <i class="material-icons">call_end</i>
+                  </a>
+                </div>
               </div>
 
             </div><!-- /.callStatusHolder -->
