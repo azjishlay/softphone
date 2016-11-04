@@ -6,6 +6,9 @@
 
   <title>Softphone Coding Project</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
   <!-- Material Design Icon Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
@@ -112,39 +115,68 @@
     </nav>
 
     <!-- Content -->
-    <div class="content container">
+    <div class="content">
 
       <div class="tab-container" id="test1-tab">
         <h1>Test 1</h1>
       </div>
 
       <div class="tab-container" id="test2-tab">
-        <h1>Test 2</h1>
+        <!-- <h1>Test 2</h1> -->
 
-        <!-- Call Form -->
-        <div class="callForm notInCall">
-          <form>
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="phoneNumber" type='tel' pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}' title='Phone Number (Format: +99(99)9999-9999)'>
-                <label for="phoneNumber">Enter Number: </label>
-              </div>
-              <div class="input-field col s6">
-                <a class="waves-effect waves-light btn" id="callBtn">call</a>
-                <a class="waves-effect waves-light btn" id="callBtn">chat</a>
-              </div>
+        <div class="row valign-wrapper">
+          <!-- Call Form -->
+          <form class="callForm">
+            <div class="input-field col inputLabel">
+              Enter Number:
+            </div>
+            <div class="input-field col inputBox">
+              <input id="phoneNumber" type='tel' class='validate' pattern='(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}' title='Phone Number: (999) 999-9999' placeholder="(480) 388-1245">
+            </div>
+            <div class="input-field col inputSelect">
+              <select class="browser-default">
+                <option value="" disabled selected>Business Areas</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+            </div>
+            <div class="input-field col btnHolder">
+              <a class="btn" id="callBtn">
+                <i class="material-icons">phone</i>
+              </a>
+              <a class="btn" id="msgBtn">
+                <i class="material-icons">chat</i>
+              </a>
             </div>
           </form>
+        </div>
 
+        <div class="row">
           <!-- Call Display -->
           <div id="callDisplay">
-            <div class="contactDetails">
-              <p class="contactName">John Weldon</p>
-              <p class="contactNumberType">Mobile</p>
+
+            <!-- Contact Details -->
+            <div class="contactDetailsHolder">
+              <div class="contactPic">
+                <img src="assets/img/johnweldon.jpg" alt="John Weldon"/>
+              </div>
+              <div class="contactText">
+                <div class="contactName">John Weldon</div>
+                <div class="contactNumberType">Mobile</div>
+              </div>
             </div>
-            <div id="callStatus"></div>
+
+            <!-- Call Status -->
+            <div class="callStatusHolder">
+              <div id="callStatus"></div>
+              <div id="callTime"></div>
+            </div>
           </div>
+
         </div>
+
+        <div class="row"></div>
       </div>
 
       <div class="tab-container" id="test3-tab">

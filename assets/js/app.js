@@ -3,6 +3,7 @@ $(document).ready(function() {
   // Plugin initialization
   $(".dropdown-button").dropdown();
   $(".button-collapse").sideNav();
+  $("select").material_select();
 
   // Get content of active menu tab
   $('nav li.tab a').click(function(e){
@@ -19,10 +20,11 @@ $(document).ready(function() {
 
   // Activate inCall state
   $('#callBtn').click(function() {
-    $(this).addClass('disabled');
+    $('.input-field *:not(#msgBtn)').addClass('disabled');
     $('#callDisplay').show();
-    $("#callStatus").addClass("connected");
+    $(".callStatusHolder").addClass("connected");
     $("#callStatus").text("Connected");
+    $("#callTime").text("00:20");
   });
 
 });

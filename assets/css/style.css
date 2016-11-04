@@ -1,3 +1,44 @@
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 100%;
+}
+
+/*
+Color Palette
+*/
+
+.gray1 {
+  color: #959595;
+}
+
+.gray2 {
+  color: #535353;
+}
+
+.blue1 {
+  color: #0062A5;
+}
+
+.blue2 {
+  color: #303A4E;
+}
+
+/*
+Nav Bar
+*/
+
+nav {
+  background-color: #959595;
+  color: #ffffff;
+}
+
 nav .nav-wrapper {
   height: 64px;
   line-height: 64px;
@@ -55,12 +96,12 @@ li.tab {
 
 li.tab.disabled a, li.tab.disabled a:hover {
   background-color: transparent;
-  color: gray;
+  color: #535353;
   cursor: default;
 }
 
 li.tab a.active {
-  background-color: gray;
+  background-color: #535353;
 }
 
 .tab {
@@ -71,12 +112,134 @@ li.tab a.active {
   width: 28%;
 }
 
+/*
+Step 1
+*/
+
 .content div.tab-container {
   display: none;
+  background-color: #535353;
+  color: #ffffff;
 }
 
+.content div.tab-container > .row {
+  height: 80px;
+  margin: 0;
+}
+
+.callForm {
+  width: 100%;
+}
+
+.callForm .inputLabel, .callForm .inputBox, .callForm .btnHolder {
+  width: 24%;
+}
+
+.callForm .inputSelect {
+  width: 28%;
+}
+
+.callForm div.input-field > * {
+  height: 50px;
+  text-align: center;
+}
+
+.callForm .inputLabel {
+  font-size: 2.4em;
+  line-height: 50px;
+  text-align: right;
+}
+
+.callForm .inputBox input#phoneNumber, .callForm .inputSelect select {
+  background-color: #ffffff;
+  border: 1px solid #959595;
+  color: #000000;
+}
+
+.callForm input#phoneNumber:focus {
+  border-bottom: 1px solid #0062A5;
+  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
+  box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
+}
+
+.callForm .inputBox input#phoneNumber {
+  font-size: 2.6em;
+}
+
+.callForm .inputSelect select {
+  font-size: 1.4em;
+}
+
+.callForm .btnHolder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.callForm .btnHolder a {
+  background-color: #303A4E;
+  color: #ffffff;
+  width: 40%;
+  margin: 0 10px;
+}
+
+.callForm .btnHolder i {
+  font-size: 3em;
+  line-height: 50px;
+  margin: auto;
+}
+
+/*
+Step 2
+*/
+
 #callDisplay {
-  display: none;
+  /*display: none;*/
+}
+
+.contactDetailsHolder {
+  padding: 4px 0;
+}
+
+.contactDetailsHolder, .contactPic, .contactText,
+.callStatusHolder, #callStatus, #callTime {
+  display: inline-block;
+}
+
+.contactPic {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.contactPic img {
+  position: absolute;
+  top:0;left:0;bottom:0;right:0;
+  margin: auto;
+  object-fit: cover;
+  height: 40px;
+}
+
+.contactText .contactName, #callStatus, #callTime {
+  font-weight: bold;
+  font-size: 1.8em;
+  line-height: 2em;
+}
+
+.contactText .contactNumberType {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+#callStatus {
+  text-transform: uppercase;
+}
+
+#callTime {
+  font-size: 3em;
 }
 
 .connected {
