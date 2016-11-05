@@ -37,7 +37,7 @@
         <!-- Full Menu -->
         <ul class="hide-on-med-and-down">
           <li class="tab">
-            <a href="#" id="test1">
+            <a href="#" id="test1" class="svgLink">
               <div class="icon">
                 <object class="svg" type="image/svg+xml" data="assets/svg/headset-with-microphone.svg">
                   <img class="svg fallback" src="assets/svg/headset-with-microphone.png" alt="" />
@@ -47,8 +47,7 @@
             </a>
           </li>
           <li class="tab">
-            <!-- <a href="#" id="test2"> -->
-            <a href="#" id="test2" class="active">
+            <a href="#" id="test2" class="svgLink">
               <div class="icon">
                 <object class="svg" id="btn2" type="image/svg+xml" data="assets/svg/phone-call-button.svg">
                   <img class="svg fallback" src="assets/svg/phone-call-button.png" alt="">
@@ -58,7 +57,7 @@
             </a>
           </li>
           <li class="tab">
-            <a href="#" id="test3">
+            <a href="#" id="test3" class="svgLink">
               <div class="icon">
                 <div class="overlay">3</div>
                 <object class="svg" type="image/svg+xml" data="assets/svg/filled-circle.svg">
@@ -69,7 +68,7 @@
             </a>
           </li>
           <li class="tab">
-            <a href="#" id="test4">
+            <a href="#" id="test4" class="svgLink">
               <div class="icon">
                 <object class="svg" type="image/svg+xml" data="assets/svg/exit-to-app-button.svg">
                   <img class="svg fallback" src="assets/svg/exit-to-app-button.png" alt="">
@@ -88,13 +87,13 @@
             </ul>
           </li>
           <li class="tab disabled">
-            <a href="#" class="">
+            <a href="#" class="svgLink">
               <div class="icon"></div>
               <div class="caption"></div>
             </a>
           </li>
           <li class="tab">
-            <a href="#" class="">
+            <a href="#" class="svgLink">
               <div class="icon">
                 <object class="svg" type="image/svg+xml" data="assets/svg/settings-cogwheel-button.svg">
                   <img class="svg fallback" src="assets/svg/settings-cogwheel-button.png" alt="">
@@ -119,17 +118,16 @@
     <div class="content">
 
       <div class="tab-container" id="test1-tab">
-        <h1>Test 1</h1>
+        <h1>Unavailable</h1>
       </div>
 
       <div class="tab-container" id="test2-tab">
-        <!-- <h1>Test 2</h1> -->
 
         <div class="row valign-wrapper step2">
           <!-- Call Form -->
           <form class="callForm">
             <div class="input-field col inputLabel">
-              Enter Number:
+              <label for="phoneNumber">Enter Number:</label>
             </div>
             <div class="input-field col inputBox">
               <input id="phoneNumber" type='tel' class='validate' pattern='(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{4}' title='Phone Number: (999) 999-9999' placeholder="(480) 388-1245">
@@ -208,10 +206,10 @@
       </div>
 
       <div class="tab-container" id="test3-tab">
-        <h1>Test 3</h1>
+        <h1>Call Queue</h1>
       </div>
       <div class="tab-container" id="test4-tab">
-        <h1>Test 4</h1>
+        <h1>Logout</h1>
       </div>
     </div>
   </div><!-- /.main -->

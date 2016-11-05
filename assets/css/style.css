@@ -1,4 +1,5 @@
 html, body {
+  background-color: #535353;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -30,6 +31,14 @@ Color Palette
   color: #303A4E;
 }
 
+.red1 {
+  color: #bd2d18;
+}
+
+.red2 {
+  color: #5a0208;
+}
+
 /*
 Nav Bar
 */
@@ -37,6 +46,9 @@ Nav Bar
 nav {
   background-color: #959595;
   color: #ffffff;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 nav .nav-wrapper {
@@ -47,6 +59,7 @@ nav .nav-wrapper {
 
 nav .nav-wrapper .icon, .fallback {
   position: relative;
+  width: auto;
   height: 24px;
 }
 
@@ -60,15 +73,35 @@ nav .nav-wrapper .icon .svg, .overlay {
 }
 
 .overlay {
-  color: black;
+  color: #000000;
+  margin: 0;
+  top: -20px;
+  z-index: 1;
 }
 
 svg {
-  fill: white;
+  fill: #ffffff;
 }
 
-svg:hover {
-  fill: green;
+a.svgLink:hover {
+
+}
+
+a.svgLink:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+a.svgLink {
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px;
+  width: 100%;
+  height: 100%;
 }
 
 nav .nav-wrapper .caption {
@@ -78,8 +111,8 @@ nav .nav-wrapper .caption {
 }
 
 nav .nav-wrapper a.dropdown-button, a.dropdown-button i {
-  height: 48px;
-  line-height: 48px;
+  height: 64px;
+  line-height: 64px;
 }
 
 nav .nav-wrapper .dropdown a {
@@ -91,13 +124,31 @@ nav .nav-wrapper .dropdown-button i {
 }
 
 li.tab {
-  padding: 8px 8px;
+  /*padding: 8px 8px;*/
+  height: 64px;
+  z-index: -99;
 }
 
 li.tab.disabled a, li.tab.disabled a:hover {
   background-color: transparent;
   color: #535353;
   cursor: default;
+}
+
+li.tab.selected, li.tab.selected a {
+  background-color: #535353;
+  color: #ffffff;
+  -webkit-box-shadow: 2px -1px 10px 1px rgba(83,83,83,0.5);
+  -moz-box-shadow: 2px -1px 10px 1px rgba(83,83,83,0.5);
+  box-shadow: 2px -1px 10px 1px rgba(83,83,83,0.5);
+}
+
+.svg {
+  fill: green;
+}
+
+li.tab a:hover {
+
 }
 
 li.tab a.active {
@@ -123,6 +174,7 @@ Step 2
 }
 
 .content div.tab-container > .row {
+  width: 100%;
   height: 80px;
   margin: 0;
 }
@@ -149,18 +201,24 @@ Step 2
 }
 
 .callForm .inputLabel {
-  font-size: 2.4em;
-  line-height: 50px;
   text-align: right;
 }
 
-.callForm .inputBox input#phoneNumber, .callForm .inputSelect select {
+.callForm .inputLabel label {
+  position: relative;
+  font-size: 2.4em;
+  line-height: 50px;
+  padding-right: 20px;
+  color: #ffffff;
+}
+
+.callForm .inputBox input, .callForm .inputSelect select {
   background-color: #ffffff;
   border: 1px solid #959595;
   color: #000000;
 }
 
-.callForm input#phoneNumber:focus {
+.callForm input:focus {
   border-bottom: 1px solid #0062A5;
   -webkit-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
   -moz-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
@@ -173,6 +231,10 @@ Step 2
 
 .callForm .inputSelect select {
   font-size: 1.4em;
+}
+
+select:focus {
+  outline: 1px solid #0062A5;
 }
 
 /*
@@ -209,6 +271,7 @@ Step 3
   width: 40px;
   overflow: hidden;
   margin-right: 20px;
+  background-color: #ffffff;
 }
 
 .contactPic img {
@@ -252,12 +315,23 @@ Step 3
 }
 
 .connected {
-  color: green;
+  color: #32cd32;
+}
+
+.input-field label.disabled, .input-field input.disabled, .input-field select.disabled {
+  background-color: #535353;
+  color: #959595;
+  border: none;
 }
 
 /*
 Buttons
 */
+
+.btnHolder .btn:hover {
+  background-color: #0062A5;
+  color: #ffffff;
+}
 
 .btnHolder {
   display: flex;
@@ -294,19 +368,23 @@ Buttons
 }
 
 #recCallBtn i {
-  color: red;
+  color: #bd2d18;
+}
+
+#recCallBtn:hover i {
+  color: #ffffff;
 }
 
 #endCallBtn {
-  background-color: red;
+  background-color: #bd2d18;
   color: #ffffff;
 }
 
 #endCallBtn:hover {
-  background-color: darkred;
+  background-color: #5a0208;
 }
 
 /* Hide on initial window load */
 .row.step3 {
-  /*display: none;*/
+  display: none;
 }
