@@ -184,7 +184,9 @@ Step 2
 }
 
 .callForm {
+  position: absolute;
   width: 100%;
+  top: 64px;
 }
 
 .callForm .inputLabel, .callForm .inputBox, .callForm .btnHolder {
@@ -218,11 +220,11 @@ Step 2
   color: #000000;
 }
 
-.callForm input:focus {
+.callForm input#phoneNumber:focus {
   border-bottom: 1px solid #0062A5;
-  -webkit-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
-  -moz-box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
-  box-shadow: 2px 2px 2px 0px rgba(0,98,165,1);
+  -webkit-box-shadow: 0 1px 0 0 #0062A5;
+  -moz-box-shadow: 0 1px 0 0 #0062A5;
+  box-shadow: 0 1px 0 0 #0062A5;
 }
 
 .callForm .inputBox input#phoneNumber {
@@ -387,4 +389,37 @@ Buttons
 /* Hide on initial window load */
 .row.step3 {
   display: none;
+}
+
+/*
+Media Queries
+*/
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 992px) {
+  .callForm .inputLabel, .callForm .inputSelect, .callForm .inputBox, .callForm .btnHolder,
+  #callDisplay > div, #callDisplay .row .col, #callDisplay .row .col > div {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+  .callForm *.disabled:not(#phoneNumber) {
+    display: none;
+  }
+  .optionBtns a, .actionBtns a {
+    display: inline-block;
+    width: 80px;
+    margin: 0 2px;
+  }
+  .actionBtns a {
+    /*display: none;*/
+  }
+}
+
+@media (max-width: 1200px) {
+
 }

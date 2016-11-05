@@ -6,12 +6,13 @@ $(document).ready(function() {
   $("select").material_select();
 
   // Get content of active menu tab
-  $('nav li.tab a').click(function(e){
+  $('nav li.tab a, .side-nav li a').click(function(e){
+
     if (!$(this).parent("li").hasClass("disabled") && !$(this).parent("li").hasClass("dropdown")) {
 
       // Reset tabs
-      $('nav li.tab a').removeClass('active');
-      $('nav li.tab').removeClass('selected');
+      $('nav li.tab a, .side-nav li a').removeClass('active');
+      $('nav li.tab, .side-nav li').removeClass('selected');
 
       // Make tab active
       $(this).addClass('active');
@@ -28,7 +29,7 @@ $(document).ready(function() {
 
   // Activate inCall state
   $('#callBtn').click(function() {
-    $('.input-field *:not(#msgBtn)').addClass('disabled').prop('disabled', function(i, v) { return !v; });
+    $('.input-field *').addClass('disabled').prop('disabled', function(i, v) { return !v; });
     $(".row.step3").show();
     $(".callStatusHolder").addClass("connected");
     // $("#callStatus").text("Connected");
